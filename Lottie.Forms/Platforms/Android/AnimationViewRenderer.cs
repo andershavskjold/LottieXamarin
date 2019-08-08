@@ -123,6 +123,11 @@ namespace Lottie.Forms.Droid
                 _needToReverseAnimationSpeed = true;
                 _animationView.ReverseAnimationSpeed();
             }
+            else if (!needReverse && _needToReverseAnimationSpeed)
+            {
+                _needToReverseAnimationSpeed = false;
+                _animationView.ReverseAnimationSpeed();
+            }
 
             _animationView.PlayAnimation();
             Element.IsPlaying = true;
